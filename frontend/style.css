@@ -1,0 +1,506 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        #dbeafe 0%,
+        #bfdbfe 100%
+    );
+
+    min-height: 100vh;
+
+    color: #1e293b;
+
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    background: #1e293b;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.15);
+
+}
+
+.logo {
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+}
+
+#searchInput {
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    width: 300px;
+
+    outline: none;
+
+    font-size: 0.9rem;
+
+}
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.form-section {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.05);
+
+}
+
+.form-section h2 {
+
+    margin-bottom: 20px;
+
+    color: #334155;
+
+}
+
+/* =========================
+   AUTH SECTION
+========================= */
+
+.auth-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.auth-container input {
+
+    flex: 1;
+
+    min-width: 220px;
+
+}
+
+.auth-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.auth-buttons button {
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+.auth-buttons button:first-child {
+
+    background: #10b981;
+
+    color: white;
+
+}
+
+.auth-buttons button:last-child {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+input:focus {
+
+    border-color: #3b82f6;
+
+    box-shadow:
+    0 0 0 3px
+    rgba(59,130,246,0.2);
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+
+}
+
+#submitBtn {
+
+    background: #2563eb;
+
+    color: white;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.title {
+
+    margin: 30px 0 20px;
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    color: #0f172a;
+
+}
+
+.products-container {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fill,
+        minmax(280px, 1fr)
+    );
+
+    gap: 25px;
+
+}
+
+.product-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    box-shadow:
+    0 4px 10px
+    rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.product-card h3 {
+
+    color: #1e293b;
+
+    margin-bottom: 10px;
+
+}
+
+.product-card p {
+
+    color: #64748b;
+
+    margin-bottom: 10px;
+
+}
+
+/* =========================
+   PRODUCT BUTTONS
+========================= */
+
+.btn-group {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+.cart-btn {
+
+    background: #facc15;
+
+    color: black;
+
+    flex: 2;
+
+}
+
+.edit-btn {
+
+    background: #3b82f6;
+
+    color: white;
+
+    flex: 1;
+
+}
+
+.delete-btn {
+
+    background: #ef4444;
+
+    color: white;
+
+    flex: 1;
+
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-container {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    margin-top: 50px;
+
+    box-shadow:
+    0 4px 15px
+    rgba(0,0,0,0.06);
+
+    border-left:
+    5px solid #10b981;
+
+}
+
+.cart-item {
+
+    background: #f8fafc;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+#cartTotal {
+
+    margin: 20px 0;
+
+    color: #0f172a;
+
+}
+
+#checkoutBtn {
+
+    background: #10b981;
+
+    color: white;
+
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 1rem;
+
+}
+
+/* =========================
+   USER INFO
+========================= */
+
+#userInfo {
+
+    font-weight: bold;
+
+    color: #facc15;
+
+}
+
+#logoutBtn {
+
+    background: #ef4444;
+
+    color: white;
+
+}
+
+/* =========================
+   UTILITY
+========================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    #searchInput {
+
+        width: 100%;
+
+    }
+
+    .auth-container {
+
+        flex-direction: column;
+
+    }
+
+    .auth-container input {
+
+        width: 100%;
+
+    }
+
+    .auth-buttons {
+
+        width: 100%;
+
+    }
+
+    .auth-buttons button {
+
+        flex: 1;
+
+    }
+
+    .btn-group {
+
+        flex-direction: column;
+
+    }
+
+}
